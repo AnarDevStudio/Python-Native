@@ -255,3 +255,9 @@ class Component:
     def onToggle(self):
         print("onToggle triggered")
 
+class Return:
+    def __init__(self, *children, **props):
+        print("returned")
+
+class App(Component):
+    Return()
