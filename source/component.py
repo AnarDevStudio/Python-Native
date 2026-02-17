@@ -1,10 +1,13 @@
 class Component:
-    def __init__(self):
-        print("Component initialized")
+    def __init__(self, **props):
+        self.props = props  
 
-    # Mouse Events
     def onClick(self):
-        print("onClick triggered")
+        handler = self.props.get("onClick")  
+        if callable(handler):
+            handler()  #
+        else:
+            print("onClick triggered")
 
     def onContextMenu(self):
         print("onContextMenu triggered")
@@ -251,3 +254,4 @@ class Component:
 
     def onToggle(self):
         print("onToggle triggered")
+
