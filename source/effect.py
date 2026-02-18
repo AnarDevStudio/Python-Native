@@ -1,6 +1,6 @@
 NO_DEPS = object()
 
-class Effect:
+class useEffect:
     def __init__(self, function, deps=NO_DEPS): 
         self.function = function
         self.deps = deps
@@ -23,5 +23,4 @@ class Effect:
 
 
 
-Effect(lambda: print("Her render"))
 

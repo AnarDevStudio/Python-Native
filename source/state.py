@@ -1,4 +1,4 @@
-class State():
+class useState():
     def __init__(this, value):
         this.value = value
 
