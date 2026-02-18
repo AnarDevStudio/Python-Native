@@ -9,6 +9,9 @@ class Component:
         else:
             print("onClick triggered")
 
+    def Color(self):
+        print("button color")
+
     def onContextMenu(self):
         print("onContextMenu triggered")
 
