@@ -14,11 +14,9 @@ class BaseComponent(Component):
     def setup(self):
         pass
 
-
 class Button(BaseComponent):
     def setup(self):
         print(f"Button hazır: {self.value}")
-
 
 class Text(BaseComponent):
     def setup(self):
@@ -27,7 +25,18 @@ class Text(BaseComponent):
             self.color()
         print(f"Text hazır: {self.value}, Color: {self.color}")
 
-
 class View(BaseComponent):
     def setup(self):
         print("View hazır")
+
+class Image(BaseComponent):
+    def __init__(self, src):
+        self.source = src
+    def setup(self):
+        self.source = self.props.get("src")
+
+class TextInput(BaseComponent):
+    def setup(self):
+        self.source = self.props.get("src")
+
+

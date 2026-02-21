@@ -12,6 +12,9 @@ class Component:
     def Color(self):
         print("button color")
 
+    def source(self):
+        print("source is come")
+
     def onContextMenu(self):
         print("onContextMenu triggered")
 
