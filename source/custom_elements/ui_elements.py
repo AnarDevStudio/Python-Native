@@ -36,6 +36,9 @@ class Image(BaseComponent):
         self.source = self.props.get("src")
 
 class TextInput(BaseComponent):
+    def __init__(self, value, placeholder):
+        self.value = value
+        self.placeholder = placeholder
     def setup(self):
         self.source = self.props.get("src")
 
